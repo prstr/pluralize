@@ -4,11 +4,15 @@
   "description": "Simple Russian Pluralizer",
   "main": "src/index.js",
   "devDependencies": {
-    "mocha": "*"
+    "mocha": "*",
+    "pre-commit": "*",
+    "eslint": "*"
   },
   "scripts": {
+    "pretest": "eslint .",
     "test": "mocha -R spec"
   },
+  "pre-commit": [ "test" ],
   "repository": {
     "type": "git",
     "url": "https://github.com/prstr/pluralize.git"
